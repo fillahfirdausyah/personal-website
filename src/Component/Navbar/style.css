@@ -1,0 +1,24 @@
+.nav-container {
+  margin: 0 auto;
+  max-width: 980px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-container ul {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container ul li {
+  list-style: none;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
