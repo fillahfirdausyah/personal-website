@@ -1,0 +1,30 @@
+.coming-soon-wrapper {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.coming-soon-body {
+  width: 100%;
+}
+
+.coming-soon-body img {
+  width: 400px;
+}
+
+.coming-soon-body footer {
+  position: absolute;
+  bottom: 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .coming-soon-body img {
+    width: 300px;
+  }
+}

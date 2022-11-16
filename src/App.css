@@ -1,12 +1,9 @@
 .wrapper {
-  --tw-bg-opacity: 1;
-  background-color: #2c303a;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 980px;
-  min-height: calc(100vh - 60px);
   padding: 0 16px 80px;
   position: relative;
-  top: 60px;
   width: 100%;
+  min-height: 100vh;
 }
