@@ -8,7 +8,8 @@ the technology that I use and how to contact me.
 The UI design for this website I was inspired by [@craftzdog](https://github.com/craftzdog/craftzdog-homepage)
 
 ### UI Design
-![Detail Work Page Mockup](https://user-images.githubusercontent.com/39095849/202369619-88aeaf82-6299-4504-b660-45867fa92698.png)
-![Home Page Mockup](https://user-images.githubusercontent.com/39095849/202369640-00df2b97-886b-4d3b-9a17-292fbd262376.png)
-![List Works Page Mockup](https://user-images.githubusercontent.com/39095849/202369653-6481387d-20d6-432c-85b5-a30a4abef258.png)
-![Tech Stack Page Mockup](https://user-images.githubusercontent.com/39095849/202369665-0af3908c-05ef-489c-a60f-e552c30e72ce.png)
+
+![Home Page Mockup](https://user-images.githubusercontent.com/39095849/202370284-ff3625aa-ace6-44d8-87c1-ebe6a4e88272.png)
+![Detail Work Page Mockup](https://user-images.githubusercontent.com/39095849/202370308-c5075db0-b31f-464b-9d26-285dc85740df.png)
+![List Works Page Mockup](https://user-images.githubusercontent.com/39095849/202370327-ecf250eb-66a1-42e8-b7c7-4e3aa9cdfd1a.png)
+![Tech Stack Page Mockup](https://user-images.githubusercontent.com/39095849/202370342-76cee4da-b5f6-443a-96bf-69c610c65c69.png)
