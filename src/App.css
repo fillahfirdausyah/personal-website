@@ -1,9 +1,52 @@
-.wrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 980px;
-  padding: 0 16px 80px;
-  position: relative;
+/* Global Style */
+
+/* Disable Anchor Decoration */
+a {
+  text-decoration: none;
+}
+
+/* Button Base Style */
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
+/* Button Varian */
+/* Primary */
+.btn-primary {
+  background-color: #3bd0b5;
+}
+
+/* Section Title */
+.section-title {
+  border-bottom: 5px solid #313134;
+  display: inline;
+}
+
+/* Grid System */
+.row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+.column {
   width: 100%;
-  min-height: 100vh;
 }
