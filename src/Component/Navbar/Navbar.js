@@ -6,16 +6,16 @@ function Navbar() {
     <nav className="nav-container">
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#">Works</a>
+          <a href="/works">Works</a>
         </li>
         <li>
-          <a href="#">Tech Stack</a>
+          <a href="/techstacks">Tech Stack</a>
         </li>
         <li>
-          <a href="#">Github</a>
+          <a href="https://github.com/fillahfirdausyah/personal-website">Github</a>
         </li>
       </ul>
     </nav>
