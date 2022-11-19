@@ -19,7 +19,7 @@ function About() {
         to know more and learn about Android Technology.
       </p>
       <div className="to-myportfolio">
-        <a href="#" className="btn btn-primary btn-tomyportfolio">
+        <a href="/works" className="btn btn-primary btn-tomyportfolio">
           My Portfolio
         </a>
       </div>
