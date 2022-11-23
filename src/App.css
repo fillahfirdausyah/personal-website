@@ -50,3 +50,12 @@ a {
 .column {
   width: 100%;
 }
+
+/* Navbar Active */
+.active {
+  border-bottom: 3px solid #3bd0b5;
+}
+
+.active:hover {
+  color: white !important;
+}
