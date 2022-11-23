@@ -1,5 +1,7 @@
 import { React, useEffect, useState } from "react";
 
+import supabaseClient from "../../api/supabaseClient";
+
 import Navbar from "../../Component/Navbar/Navbar";
 import WorksCard from "../../Component/WorksCard";
 import Footer from "../../Component/Footer";
@@ -7,6 +9,15 @@ import Footer from "../../Component/Footer";
 import "./style.css";
 
 function WorksPage() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fethcData = async () => {
+      const { data, error } = await supabaseClient.from("works").select();
+      setData(data);
+    };
+    fethcData();
+  }, []);
 
   return (
     <>
@@ -19,22 +30,15 @@ function WorksPage() {
         <div className="works-section-wrapper">
           <h3 className="section-title">Portfolio</h3>
           <div className="list-works row">
-            <WorksCard
-              title="Wecan"
-              description="Wecan is an Kitabisa.com clone app for assigment purpose"
-            />
-            <WorksCard
-              title="Wecan"
-              description="Wecan is an Kitabisa.com clone app for assigment purpose"
-            />
-            <WorksCard
-              title="Wecan"
-              description="Wecan is an Kitabisa.com clone app for assigment purpose"
-            />
-            <WorksCard
-              title="Wecan"
-              description="Wecan is an Kitabisa.com clone app for assigment purpose"
-            />
+            {data.map((x) => (
+              <div key={x.id}>
+                <WorksCard
+                  cover={x.cover}
+                  title={x.title}
+                  description={x.short_desc}
+                />
+              </div>
+            ))}
           </div>
         </div>
         <Footer />

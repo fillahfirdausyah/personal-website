@@ -8,7 +8,7 @@ function WorksCard(props) {
   return (
     <div className="works-card-wrapper">
       <a href="">
-        <img src={Wecan} alt="" />
+        <img src={props.cover} alt="" />
       </a>
       <a href="">
         <h3>{props.title}</h3>
