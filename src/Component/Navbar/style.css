@@ -29,3 +29,7 @@
   color: white;
   font-weight: 600;
 }
+
+.nav-container ul li a:hover {
+  color: #3bd0b5;
+}
