@@ -39,18 +39,6 @@ a {
   display: inline;
 }
 
-/* Grid System */
-.row {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  column-gap: 50px;
-  row-gap: 50px;
-}
-
-.column {
-  width: 100%;
-}
-
 /* Navbar Active */
 .active {
   border-bottom: 3px solid #3bd0b5;

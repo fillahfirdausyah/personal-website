@@ -40,7 +40,10 @@ function WorksPage() {
           ) : (
             <div className="list-works row">
               {data.map((x) => (
-                <div key={x.id}>
+                <div
+                  key={x.id}
+                  className="col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                >
                   <WorksCard
                     cover={x.cover}
                     title={x.title}
