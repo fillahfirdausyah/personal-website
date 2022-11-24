@@ -118,3 +118,34 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+.appear-out {
+  -webkit-animation: appear-out 0.3s linear forwards;
+  -moz-animation: appear-out 0.3s linear forwards;
+  -ms-animation: appear-out 0.3s linear forwards;
+  animation: appear-out 0.3s linear forwards;
+}
+
+@-webkit-keyframes appear-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+  }
+}
+
+@keyframes appear-out {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+  }
+}

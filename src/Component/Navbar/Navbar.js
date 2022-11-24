@@ -69,7 +69,7 @@ function Navbar() {
             className={
               isNavItemVisible
                 ? "nav-mobile-item-container angry-animate"
-                : "nav-mobile-item-container hidden"
+                : "nav-mobile-item-container appear-out"
             }
           >
             <ul>
