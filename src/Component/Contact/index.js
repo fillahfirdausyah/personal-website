@@ -10,19 +10,22 @@ function Contact() {
     <div className="contact-section">
       <h3 className="section-title">Contact Me</h3>
       <div className="contact-wrapper">
-        <a href="#" className="contact">
+        <a href="mailto:fillahfirdausyah@gmail.com" className="contact">
           <MdOutlineAlternateEmail className="contact-icon" />
           fillahfirdausyah@gmail.com
         </a>
-        <a href="#" className="contact">
+        <a
+          href="https://www.linkedin.com/in/fillahfirdausyah/"
+          className="contact"
+        >
           <FaLinkedin className="contact-icon" />
           Fillah Akbar Firdasuyah
         </a>
-        <a href="#" className="contact">
+        <a href="https://instagram.com/fillahfirdausyah" className="contact">
           <FaInstagram className="contact-icon" />
           fillahfirdausyah
         </a>
-        <a href="#" className="contact">
+        <a href="https://github.com/fillahfirdausyah" className="contact">
           <FaGithub className="contact-icon" />
           fillahfirdausyah
         </a>
