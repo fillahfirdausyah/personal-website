@@ -25,29 +25,67 @@ function StackPage() {
         <p>These are some of the Tech Stacks that I use</p>
         <div className="stack-section">
           <h3 className="section-title">Web</h3>
-          <div className="stack-item-section">
-            <StackItem icon={ReactIcon} title="ReactJS" />
-            <StackItem icon={NodeIcon} title="NodeJS" />
-            <StackItem icon={ExpressIcon} title="ExpressJS" />
-            <StackItem icon={LaravelIcon} title="Laravel" />
+          <div className="stack-item-section row">
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={ReactIcon}
+              title="ReactJS"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={NodeIcon}
+              title="NodeJS"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={ExpressIcon}
+              title="ExpressJS"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={LaravelIcon}
+              title="Laravel"
+            />
           </div>
         </div>
         <div className="stack-section">
           <h3 className="section-title">Android</h3>
-          <div className="stack-item-section">
-            <StackItem icon={KotlinIcon} title="Kotlin" />
-            <StackItem icon={ReactIcon} title="React Native" />
-            <StackItem />
-            <StackItem />
+          <div className="stack-item-section row">
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={KotlinIcon}
+              title="Kotlin"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={ReactIcon}
+              title="React Native"
+            />
           </div>
         </div>
         <div className="stack-section">
           <h3 className="section-title">Database / Cloud Service</h3>
-          <div className="stack-item-section">
-            <StackItem icon={MysqlIcon} title="MySQL" />
-            <StackItem icon={PostgresqlIcon} title="PostgreSQL" />
-            <StackItem icon={MongodbIcon} title="MongoDB" />
-            <StackItem icon={FirebaseIcon} title="Firebase" />
+          <div className="stack-item-section row">
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={MysqlIcon}
+              title="MySQL"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={PostgresqlIcon}
+              title="PostgreSQL"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={MongodbIcon}
+              title="MongoDB"
+            />
+            <StackItem
+              className="stack-item col-lg-3 col-md-3 col-sm-6 col-xs-6"
+              icon={FirebaseIcon}
+              title="Firebase"
+            />
           </div>
         </div>
       </div>
