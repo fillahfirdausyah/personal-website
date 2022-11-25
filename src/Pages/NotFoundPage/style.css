@@ -1,0 +1,11 @@
+.not-found-wrapper {
+  text-align: center;
+}
+
+.not-found-wrapper img {
+  width: 100%;
+}
+
+.not-found-wrapper .back-to-home {
+  margin-top: 40px;
+}

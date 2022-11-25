@@ -2,7 +2,13 @@ import React from "react";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { FrontPage, WorksPage, StackPage } from "../Pages";
+import {
+  FrontPage,
+  WorksPage,
+  StackPage,
+  DetailWorksPage,
+  NotFoundPage,
+} from "../Pages";
 
 const Router = () => {
   return (
@@ -17,6 +23,10 @@ const Router = () => {
         <Route path="/techstacks" exact>
           <StackPage />
         </Route>
+        <Route path="/works/:id">
+          <DetailWorksPage />
+        </Route>
+        <Route component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
   );
