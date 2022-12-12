@@ -7,16 +7,16 @@ function About() {
     <div className="about-section">
       <h3 className="section-title">About</h3>
       <p>
-        I am a student majoring in informatics at university of amikom
-        yogyakarta, and I am a person with personality, and proficient in
-        managing sensitive situations. Highly organized, self motivated, and
-        also able to work in a team. I have strong knowledge of Web Development
-        with 5 years experience, my area of expertise is in Backend development
-        process. And now, I am interested in Android Technology so I joined{" "}
+        I am a student majoring in informatics at the University of Amikom
+        Yogyakarta. I am a person with a strong personality and am proficient in
+        managing sensitive situations. I am highly organized, self-motivated,
+        and capable of working well in a team. I have extensive knowledge of web
+        development and have been working in the field for five years, with a
+        focus on backend development. I am now interested in learning more about
+        Android technology, which is why I joined the{" "}
         <a className="link" href="https://grow.google/intl/id_id/bangkit/">
           Bangkit Academy 2022
-        </a>{" "}
-        to know more and learn about Android Technology.
+        </a>
       </p>
       <div className="to-myportfolio">
         <a href="/works" className="btn btn-primary btn-tomyportfolio">
