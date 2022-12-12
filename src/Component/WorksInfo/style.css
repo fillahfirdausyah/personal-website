@@ -2,8 +2,9 @@
   font-size: 15px;
   font-weight: 400;
   margin-top: 20px;
+  display: flex;
 }
-
+ 
 .works-info span {
   background-color: rgba(79, 201, 179, 0.26);
   color: #3bd0b5;
@@ -14,4 +15,8 @@
 
 .works-info a {
   color: #ff347d;
+}
+
+.work-info-value {
+  word-wrap: break-word;
 }
