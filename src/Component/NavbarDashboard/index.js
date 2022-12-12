@@ -19,7 +19,7 @@ function NavbarDashboard() {
             : "navbar-home navbar-default-style"
         }
       >
-        <a href="#">
+        <a href="/dashboard">
           <div className="menu-icon-container">
             <AiFillHome className="icon" />
           </div>
@@ -34,7 +34,7 @@ function NavbarDashboard() {
             : "navbar-home navbar-default-style"
         }
       >
-        <a href="#">
+        <a href="/dashboard/add-work">
           <div className="menu-icon-container">
             <AiFillFileAdd className="icon" />
           </div>
