@@ -1,6 +1,7 @@
 import React from "react";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ProtectedRoute from "./ProtectedRoute";
 
 import {
   FrontPage,
@@ -9,6 +10,7 @@ import {
   DetailWorksPage,
   NotFoundPage,
   LoginPage,
+  DashboardPage,
 } from "../Pages";
 
 const Router = () => {
@@ -30,6 +32,7 @@ const Router = () => {
         <Route path="/login">
           <LoginPage />
         </Route>
+        <ProtectedRoute path="/dashboard" component={DashboardPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
