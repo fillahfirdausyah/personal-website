@@ -21,7 +21,7 @@ function StackPage() {
   return (
     <>
       <Navbar />
-      <div className="home-container">
+      <div className="main-page-wrapper">
         <p>These are some of the Tech Stacks that I use</p>
         <div className="stack-section">
           <h3 className="section-title">Web</h3>

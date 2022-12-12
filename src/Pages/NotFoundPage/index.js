@@ -7,7 +7,7 @@ import "./style.css";
 
 function NotFoundPage() {
   return (
-    <div className="home-container">
+    <div className="main-page-wrapper">
       <div className="not-found-wrapper">
         <img src={NotFoundImage} alt="" />
         <h3>Sorry, page not found</h3>

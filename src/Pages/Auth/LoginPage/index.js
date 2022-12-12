@@ -26,7 +26,7 @@ function Login() {
   };
 
   return (
-    <div className="home-container login-page">
+    <div className="main-page-wrapper login-page">
       <div className="login-wrapper">
         <h2>Login</h2>
         {alertMessage == "" ? "" : <p className="alert">{alertMessage}</p>}

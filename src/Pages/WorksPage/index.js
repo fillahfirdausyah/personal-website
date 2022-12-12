@@ -26,7 +26,7 @@ function WorksPage() {
   return (
     <>
       <Navbar />
-      <div className="home-container">
+      <div className="main-page-wrapper">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
           deserunt dolorum facere.

@@ -12,9 +12,9 @@ import Footer from "../../Component/Footer";
 
 function index() {
   return (
-    <>
+    <div className="max-w-screen-sm">
       <Navbar />
-      <div className="home-container">
+      <div className="main-page-wrapper">
         <MyProfile
           profilePict={profilePicture}
           fullName="Fillah Akbar Firdausyah"
@@ -25,7 +25,7 @@ function index() {
         <Contact />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

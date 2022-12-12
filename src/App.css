@@ -1,5 +1,34 @@
 /* Global Style */
 
+.App {
+  box-sizing: border-box;
+}
+
+/* Home Wrapper */
+.main-page-wrapper {
+  --tw-bg-opacity: 1;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 500px;
+  min-height: calc(100vh - 60px);
+  padding: 0 0 80px;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .main-page-wrapper {
+    --tw-bg-opacity: 1;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 500px;
+    min-height: calc(100vh - 60px);
+    padding: 0 40px 80px;
+    position: relative;
+    width: 100%;
+  }
+}
+
 /* Disable Anchor Decoration */
 a {
   text-decoration: none;

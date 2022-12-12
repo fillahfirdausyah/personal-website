@@ -50,7 +50,7 @@ function DetailWorksPage() {
           <Loading />
         </div>
       ) : (
-        <div className="home-container">
+        <div className="main-page-wrapper">
           <div className="detail-works-wrapper">
             <img src={data[0].cover} alt="" />
             <div className="breadcrumbs">
