@@ -8,6 +8,7 @@ import {
   StackPage,
   DetailWorksPage,
   NotFoundPage,
+  LoginPage,
 } from "../Pages";
 
 const Router = () => {
@@ -25,6 +26,9 @@ const Router = () => {
         </Route>
         <Route path="/works/:id">
           <DetailWorksPage />
+        </Route>
+        <Route path="/login">
+          <LoginPage />
         </Route>
         <Route component={NotFoundPage} />
       </Switch>
