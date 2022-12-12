@@ -5,6 +5,7 @@ import DetailWorksPage from "./DetailWorksPage";
 import NotFoundPage from "./NotFoundPage";
 import LoginPage from "./Auth/LoginPage";
 import DashboardPage from "./Dashboard";
+import AddWorkPage from "./AddWorkPage";
 
 export {
   FrontPage,
@@ -14,4 +15,5 @@ export {
   NotFoundPage,
   LoginPage,
   DashboardPage,
+  AddWorkPage,
 };

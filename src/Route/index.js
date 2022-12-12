@@ -11,6 +11,7 @@ import {
   NotFoundPage,
   LoginPage,
   DashboardPage,
+  AddWorkPage,
 } from "../Pages";
 
 const Router = () => {
@@ -32,7 +33,8 @@ const Router = () => {
         <Route path="/login">
           <LoginPage />
         </Route>
-        <ProtectedRoute path="/dashboard" component={DashboardPage} />
+        <ProtectedRoute path="/dashboard" component={DashboardPage} exact />
+        <ProtectedRoute path="/dashboard/add-work" component={AddWorkPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
