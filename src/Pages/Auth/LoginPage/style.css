@@ -15,23 +15,6 @@
   /* visibility: hidden; */
 }
 
-.item-input {
-  margin-top: 20px;
-}
-
-.item-input input {
-  height: 35px;
-  margin-top: 6px;
-  padding: 0 10px;
-  width: 100%;
-  border-radius: 7px;
-  border-width: 0;
-  font-size: 14px;
-  color: white;
-  caret-color: white;
-  background-color: #313134;
-}
-
 .btn-login {
   background-color: #3bd0b5;
   width: 100%;
@@ -41,9 +24,5 @@
 @media (max-width: 576px) {
   .login-wrapper {
     width: 100%;
-  }
-
-  .item-input input {
-    height: 38px;
   }
 }
