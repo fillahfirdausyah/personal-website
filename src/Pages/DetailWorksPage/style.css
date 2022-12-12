@@ -1,0 +1,38 @@
+.detail-works-wrapper {
+  width: 100%;
+}
+
+.detail-works-wrapper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.breadcrumbs {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs a {
+  color: #ff347d;
+}
+
+.works-desc {
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.works-info-wrapper {
+  margin-top: 40px;
+}
+
+.detail-photo-works-wrapper {
+  margin-top: 50px;
+}
+
+.photo-detail-works {
+  margin-bottom: 20px;
+}
