@@ -27,6 +27,8 @@
 
 .works-info-wrapper {
   margin-top: 40px;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .detail-photo-works-wrapper {
@@ -35,4 +37,13 @@
 
 .photo-detail-works {
   margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .detail-works-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
