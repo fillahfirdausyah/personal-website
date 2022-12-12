@@ -7,6 +7,7 @@ import supabaseClient from "../../api/supabaseClient";
 import Navbar from "../../Component/Navbar/Navbar";
 import WorksInfo from "../../Component/WorksInfo";
 import Footer from "../../Component/Footer";
+import Loading from "../../Component/Loading";
 
 import Wecan from "../../Assets/works/wecan.png";
 
@@ -44,34 +45,40 @@ function DetailWorksPage() {
   return (
     <>
       <Navbar />
-      <div className="home-container">
-        <div className="detail-works-wrapper">
-          <img src={data[0].cover} alt="" />
-          <div className="breadcrumbs">
-            <a href="/works">
-              <h4>Works</h4>
-            </a>
-            <BiChevronRight size={24} />
-            <h4>{id}</h4>
-          </div>
-          <div className="works-desc">
-            <p>{data[0].desc}</p>
-          </div>
-          <div className="works-info-wrapper">
-            <WorksInfo title={"Platform"} value={data[0].platform} />
-            <WorksInfo title={"Stack"} value={data[0].stack} />
-            <WorksInfo title={"Source"} value={data[0].source} />
-          </div>
-          <div className="detail-photo-works-wrapper">
-            <img className="photo-detail-works" src={Wecan} alt="" />
-            <img className="photo-detail-works" src={Wecan} alt="" />
-            <img className="photo-detail-works" src={Wecan} alt="" />
-            <img className="photo-detail-works" src={Wecan} alt="" />
-            <img className="photo-detail-works" src={Wecan} alt="" />
-          </div>
+      {isLoading ? (
+        <div className="loading">
+          <Loading />
         </div>
-        <Footer />
-      </div>
+      ) : (
+        <div className="home-container">
+          <div className="detail-works-wrapper">
+            <img src={data[0].cover} alt="" />
+            <div className="breadcrumbs">
+              <a href="/works">
+                <h4>Works</h4>
+              </a>
+              <BiChevronRight size={24} />
+              <h4>{id}</h4>
+            </div>
+            <div className="works-desc">
+              <p>{data[0].desc}</p>
+            </div>
+            <div className="works-info-wrapper">
+              <WorksInfo title={"Platform"} value={data[0].platform} />
+              <WorksInfo title={"Stack"} value={data[0].stack} />
+              <WorksInfo title={"Source"} value={data[0].source} />
+            </div>
+            <div className="detail-photo-works-wrapper">
+              <img className="photo-detail-works" src={Wecan} alt="" />
+              <img className="photo-detail-works" src={Wecan} alt="" />
+              <img className="photo-detail-works" src={Wecan} alt="" />
+              <img className="photo-detail-works" src={Wecan} alt="" />
+              <img className="photo-detail-works" src={Wecan} alt="" />
+            </div>
+          </div>
+          <Footer />
+        </div>
+      )}
     </>
   );
 }
