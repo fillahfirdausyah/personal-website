@@ -1,47 +1,164 @@
-import React from "react";
+import { React, useState } from "react";
+import supabaseClient from "../../api/supabaseClient";
+
+import supbaseCLient from "../../api/supabaseClient";
 
 import AppBar from "../../Component/AppBar";
 import NavbarDashboard from "../../Component/NavbarDashboard";
+import Spinner from "../../Component/Spinner";
 
 import "./style.css";
 
 function AddWorkPage() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [workData, setWorkData] = useState({
+    title: "",
+    short_desc: "",
+    desc: "",
+    platform: "",
+    stack: "",
+    source: "",
+  });
+  const [cover, setCover] = useState("");
+
+  const handleAllChange = (e) => {
+    const { name, value } = e.target;
+    setWorkData({
+      ...workData,
+      [name]: value,
+    });
+  };
+
+  const handleFile = (e) => {
+    setCover(e.target.files[0]);
+  };
+
+  const uploadWork = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const file = cover;
+    const fileExt = cover.name.split(".").pop();
+    const fileName = `${Math.random()}.${fileExt}`;
+    const filePath = fileName;
+
+    const { error } = await supbaseCLient.storage
+      .from("works-image")
+      .upload(filePath, file);
+
+    const { data } = await supabaseClient.storage
+      .from("works-image")
+      .getPublicUrl(filePath);
+
+    const newWorkData = {
+      ...workData,
+      cover: data.publicUrl,
+    };
+
+    try {
+      await supabaseClient.from("works").insert(newWorkData);
+    } catch (error) {
+      alert(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-screen-sm">
       <AppBar title={"Add Work"} />
       <div className="main-page-wrapper">
         <div className="add-work">
-          <h3>Add New Work</h3>
           <form>
             <div className="item-input">
               <h4>Title</h4>
-              <input type="text" placeholder="Title" />
+              <input
+                name="title"
+                onChange={handleAllChange}
+                value={workData.title}
+                type="text"
+                placeholder="Title"
+              />
             </div>
             <div className="item-input">
               <h4>Short Desc</h4>
-              <textarea type="text" />
+              <textarea
+                placeholder="Short Desc"
+                name="short_desc"
+                onChange={handleAllChange}
+                value={workData.short_desc}
+                type="text"
+              />
             </div>
             <div className="item-input">
               <h4>Desc</h4>
-              <textarea type="text" />
+              <textarea
+                placeholder="Long Desc"
+                name="desc"
+                onChange={handleAllChange}
+                value={workData.desc}
+                type="text"
+              />
             </div>
-            <div className="item-input">
-              <h4>Platform</h4>
-              <input type="text" placeholder="Platform" />
+            <div className="row">
+              <div className="col-lg-6 col-xs-6">
+                <div className="item-input">
+                  <h4>Platform</h4>
+                  <input
+                    name="platform"
+                    onChange={handleAllChange}
+                    value={workData.platform}
+                    type="text"
+                    placeholder="Platform"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6 col-xs-6">
+                <div className="item-input">
+                  <h4>Stack</h4>
+                  <input
+                    name="stack"
+                    onChange={handleAllChange}
+                    value={workData.stack}
+                    type="text"
+                    placeholder="Stack"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="item-input">
-              <h4>Stack</h4>
-              <input type="text" placeholder="Stack" />
+            <div className="row">
+              <div className="col-lg-6 col-xs-6">
+                <div className="item-input">
+                  <h4>Source</h4>
+                  <input
+                    name="source"
+                    onChange={handleAllChange}
+                    value={workData.source}
+                    type="text"
+                    placeholder="Source"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6 col-xs-6">
+                <div className="item-input">
+                  <h4>Cover</h4>
+                  <input onChange={handleFile} name="cover" type="file" />
+                </div>
+              </div>
             </div>
-            <div className="item-input">
-              <h4>Source</h4>
-              <input type="text" placeholder="Source" />
-            </div>
-            <div className="item-input">
-              <h4>Cover</h4>
-              <input type="file" id="cover" />
-            </div>
-            
+            {isLoading ? (
+              <div className="loading spinner-wrapper">
+                <Spinner />
+              </div>
+            ) : (
+              <button
+                onClick={uploadWork}
+                type="submit"
+                className="btn btn-add-work"
+              >
+                Add Work
+              </button>
+            )}
           </form>
         </div>
       </div>
