@@ -1,0 +1,24 @@
+.about-section {
+  margin-top: 50px;
+}
+
+.about-section p {
+  margin-top: 14px;
+}
+
+.about-section a.link {
+  text-decoration: none;
+  color: #ff347d;
+}
+
+.about-section .to-myportfolio {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-section .to-myportfolio .btn-tomyportfolio {
+  width: 40%;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 9px;
+}

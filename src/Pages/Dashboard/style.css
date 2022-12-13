@@ -1,0 +1,44 @@
+.dashboard-wrapper {
+  width: 100%;
+}
+
+.list-works-wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.list-workd-card {
+  margin: 10px 0;
+  background-color: #414145;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+}
+.list-workd-card img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.list-workd-card .work-info {
+  width: 40%;
+}
+
+.work-info p {
+  font-size: 11px;
+}
+
+.btn-delete {
+  background-color: rgb(250, 78, 78);
+}
+
+@media (max-width: 576px) {
+  .list-workd-card {
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+  }
+}

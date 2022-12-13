@@ -1,0 +1,17 @@
+.AppBar {
+  height: 60px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  background-color: #313134;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.AppBar h4::first-letter {
+  text-transform: uppercase;
+}

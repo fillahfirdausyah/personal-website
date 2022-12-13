@@ -1,0 +1,33 @@
+.my-profile-section {
+  text-align: center;
+  margin-top: 49px;
+}
+
+.my-profile-section img {
+  width: 140px;
+}
+
+.my-profile-section .intro-section {
+  background-color: #313134;
+  margin-top: 44px;
+  height: 50px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.my-profile-section .user-detail {
+  text-align: left;
+  margin-top: 18px;
+}
+
+.my-profile-section .user-detail h3 {
+  font-size: 24px;
+}
+
+.my-profile-section .user-detail p {
+  font-weight: 300;
+  font-size: 16px;
+}
