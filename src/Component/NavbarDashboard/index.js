@@ -1,14 +1,23 @@
 import React from "react";
 
-import { useLocation } from "react-router-dom";
+import supabaseClient from "../../api/supabaseClient";
 
+import { useLocation, useHistory } from "react-router-dom";
 import { AiFillHome, AiFillFileAdd, AiOutlineLogout } from "react-icons/ai";
 
 import "./style.css";
 
 function NavbarDashboard() {
   const location = useLocation();
+  const history = useHistory();
   const { pathname } = location;
+
+  const logOut = (e) => {
+    e.preventDefault();
+
+    supabaseClient.auth.signOut();
+    history.push("/");
+  };
 
   return (
     <div className="bottom-nav">
@@ -49,7 +58,7 @@ function NavbarDashboard() {
             : "navbar-home navbar-default-style"
         }
       >
-        <a href="#">
+        <a onClick={logOut}>
           <div className="menu-icon-container">
             <AiOutlineLogout className="icon" />
           </div>
