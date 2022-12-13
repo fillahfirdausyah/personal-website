@@ -1,5 +1,8 @@
 import { React, useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import supabaseClient from "../../../api/supabaseClient";
+import Spinner from "../../../Component/Spinner";
 
 import "./style.css";
 
@@ -8,6 +11,8 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alertMessage, setAllertMessage] = useState("");
+
+  const history = useHistory();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,8 +23,9 @@ function Login() {
         email,
         password,
       });
+      history.push("/dashboard");
     } catch (error) {
-      setAllertMessage(error.error_description || error.message);
+      setAllertMessage(error.error_description);
     } finally {
       setIsLoading(false);
     }
@@ -47,9 +53,15 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-login">
-            Login
-          </button>
+          {isLoading ? (
+            <div className="loading spinner-wrapper">
+              <Spinner />
+            </div>
+          ) : (
+            <button type="submit" className="btn btn-login">
+              Login
+            </button>
+          )}
         </form>
       </div>
     </div>
