@@ -87,20 +87,32 @@ a {
   font-size: 14px;
   color: white;
   caret-color: white;
-  background-color: #313134;
+  background-color: #5e5e64;
+}
+
+input::placeholder {
+  color: rgb(180, 180, 180);
+}
+
+.item-input input[type="file"] {
+  padding: 7px;
+}
+
+textarea::placeholder {
+  color: rgb(180, 180, 180);
 }
 
 .item-input textarea {
   height: 60px;
   margin-top: 6px;
-  padding: 0 10px;
+  padding: 10px;
   width: 100%;
   border-radius: 7px;
   border-width: 0;
   font-size: 14px;
   color: white;
   caret-color: white;
-  background-color: #313134;
+  background-color: #5e5e64;
 }
 
 @media (max-width: 576px) {
