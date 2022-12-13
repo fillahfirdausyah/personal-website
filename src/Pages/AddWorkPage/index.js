@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import supabaseClient from "../../api/supabaseClient";
 
-import supbaseCLient from "../../api/supabaseClient";
+import { useHistory } from "react-router-dom";
 
 import AppBar from "../../Component/AppBar";
 import NavbarDashboard from "../../Component/NavbarDashboard";
@@ -10,6 +10,8 @@ import Spinner from "../../Component/Spinner";
 import "./style.css";
 
 function AddWorkPage() {
+  const history = useHistory();
+
   const [isLoading, setIsLoading] = useState(false);
   const [workData, setWorkData] = useState({
     title: "",
@@ -42,7 +44,7 @@ function AddWorkPage() {
     const fileName = `${Math.random()}.${fileExt}`;
     const filePath = fileName;
 
-    const { error } = await supbaseCLient.storage
+    const { error } = await supabaseClient.storage
       .from("works-image")
       .upload(filePath, file);
 
@@ -57,6 +59,7 @@ function AddWorkPage() {
 
     try {
       await supabaseClient.from("works").insert(newWorkData);
+      history.push("/dashboard");
     } catch (error) {
       alert(error);
     } finally {
