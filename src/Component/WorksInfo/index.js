@@ -10,7 +10,7 @@ function WorksInfo(props) {
       </p>
       <p className="work-info-value">
         {props.title == "Source" ? (
-          <a href={`https://${props.value}`}>{props.value}</a>
+          <a href={`${props.value}`}>{props.value}</a>
         ) : (
           props.value
         )}

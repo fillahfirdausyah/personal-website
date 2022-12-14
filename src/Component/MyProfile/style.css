@@ -15,7 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+}
+
+.my-profile-section .intro-section h4 {
+  font-weight: 400;
 }
 
 .my-profile-section .user-detail {
@@ -25,6 +28,7 @@
 
 .my-profile-section .user-detail h3 {
   font-size: 24px;
+  font-weight: 500;
 }
 
 .my-profile-section .user-detail p {

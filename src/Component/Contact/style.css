@@ -1,4 +1,4 @@
-.contact-section {
+.contact-section { 
   margin-top: 50px;
 }
 
@@ -6,6 +6,11 @@
   margin-top: 20px;
   font-size: 17px;
   font-weight: 600;
+}
+
+.contact-wrapper a {
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .contact-wrapper .contact {
