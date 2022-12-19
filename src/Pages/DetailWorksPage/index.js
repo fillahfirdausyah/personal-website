@@ -9,8 +9,6 @@ import WorksInfo from "../../Component/WorksInfo";
 import Footer from "../../Component/Footer";
 import Loading from "../../Component/Loading";
 
-import Wecan from "../../Assets/works/wecan.png";
-
 import "./style.css";
 import FadeIn from "react-fade-in/lib/FadeIn";
 
