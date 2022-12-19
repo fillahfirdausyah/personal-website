@@ -3,5 +3,46 @@
 }
 
 .list-works {
-  margin-top: 40px;
+  margin-top: -50px;
+}
+
+.top-works-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.filter-works-wrapper {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-filter {
+  background-color: #5e5e64;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-value {
+  background-color: #5e5e64;
+  width: 150px;
+  padding: 15px;
+  border-radius: 7px;
+  margin-top: 5px;
+  z-index: 11;
+}
+
+.filter-value ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.filter-value ul li:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #3bd0b5;
 }

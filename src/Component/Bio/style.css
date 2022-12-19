@@ -7,10 +7,10 @@
 }
 
 .bio-history {
+  text-align: left;
   font-size: 17px;
-  padding-left: 3.4em;
-  text-indent: -3.4em;
   margin-top: 10px;
+  display: flex;
 }
 
 .bio-history .history-year {

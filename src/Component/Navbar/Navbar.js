@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { BiMenu } from "react-icons/bi";
 
@@ -7,7 +7,7 @@ import "./style.css";
 
 function Navbar() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [isNavItemVisible, setIsNavItemVisible] = useState(false);
+  const [isNavItemVisible, setIsNavItemVisible] = useState(null);
 
   const location = useLocation();
   const { pathname } = location;
@@ -28,27 +28,30 @@ function Navbar() {
         <nav className="nav-container">
           <ul>
             <li>
-              <a href="/" className={pathname == "/" ? "active" : ""}>
+              <Link to="/" className={pathname == "/" ? "active" : ""}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/works" className={pathname == "/works" ? "active" : ""}>
+              <Link
+                to="/works"
+                className={pathname == "/works" ? "active" : ""}
+              >
                 Works
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/techstacks"
+              <Link
+                to="/techstacks"
                 className={pathname == "/techstacks" ? "active" : ""}
               >
                 Tech Stack
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://github.com/fillahfirdausyah/personal-website">
+              <Link to="https://github.com/fillahfirdausyah/personal-website">
                 Github
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -74,30 +77,30 @@ function Navbar() {
           >
             <ul>
               <li>
-                <a href="/" className={pathname == "/" ? "active" : ""}>
+                <Link to="/" className={pathname == "/" ? "active" : ""}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/works"
+                <Link
+                  to="/works"
                   className={pathname == "/works" ? "active" : ""}
                 >
                   Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/techstacks"
+                <Link
+                  to="/techstacks"
                   className={pathname == "/techstacks" ? "active" : ""}
                 >
                   Tech Stack
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://github.com/fillahfirdausyah/personal-website">
+                <Link to="https://github.com/fillahfirdausyah/personal-website">
                   Github
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

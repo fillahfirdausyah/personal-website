@@ -2,15 +2,17 @@ import React from "react";
 
 import "./style.css";
 
+import { Link } from "react-router-dom";
+
 function WorksCard(props) {
   return (
-    <div className="works-card-wrapper"> 
-      <a href={`/works/${props.title}`}>
+    <div className="works-card-wrapper">
+      <Link to={`/works/${props.title}`}>
         <img src={props.cover} alt="" />
-      </a>
-      <a href={`/works/${props.title}`}>
+      </Link>
+      <Link to={`/works/${props.title}`}>
         <h3>{props.title}</h3>
-      </a>
+      </Link>
       <p>{props.description}</p>
     </div>
   );

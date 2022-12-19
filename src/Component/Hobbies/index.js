@@ -6,9 +6,7 @@ function Hobbies() {
   return (
     <div className="hobbies-section">
       <h3 className="section-title">Hobbies</h3>
-      <p className="hobbies">
-        Music, Playing Guitar, Piano, Mechanical Keyboard
-      </p>
+      <p className="hobbies">Music, Playing Guitar, Mechanical Keyboard</p>
     </div>
   );
 }

@@ -13,15 +13,23 @@ function Bio() {
         </div>
         <div className="bio-history">
           <span className="history-year">2019</span>
-          Graduate from SMK N 2 Bitung (Computer and Network Engineering)
+          <div className="history-detail">
+            <p className="history-main">Graduate from SMK N 2 Bitung</p>
+            <p className="history-role">(Computer and Network Engineering)</p>
+          </div>
         </div>
         <div className="bio-history">
           <span className="history-year">2020</span>
-          Worked at PT.Buana Lintas Media (Fullstack Developer)
+          <div className="history-detail">
+            <p className="history-main">Worked at PT.Buana Lintas Media</p>
+            <p className="history-role">(Web Developer)</p>
+          </div>
         </div>
         <div className="bio-history">
           <span className="history-year">2022</span>
-          Graduate From Bangkit Academy 2022
+          <div className="history-detail">
+            <p className="history-main">Graduate From Bangkit Academy 2022</p>
+          </div>
         </div>
       </div>
     </div>

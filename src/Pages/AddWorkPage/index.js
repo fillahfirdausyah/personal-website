@@ -20,6 +20,7 @@ function AddWorkPage() {
     platform: "",
     stack: "",
     source: "",
+    category: "",
   });
   const [cover, setCover] = useState("");
 
@@ -41,8 +42,9 @@ function AddWorkPage() {
 
     const file = cover;
     const fileExt = cover.name.split(".").pop();
-    const fileName = `${Math.random()}.${fileExt}`;
-    const filePath = fileName;
+    const fileNameOrigin = cover.name.split(".")[0];
+    const fileName = `${fileNameOrigin}-${Math.random()}.${fileExt}`;
+    const filePath = `${workData.title}/${fileName}`;
 
     const { error } = await supabaseClient.storage
       .from("works-image")
@@ -146,6 +148,24 @@ function AddWorkPage() {
                 <div className="item-input">
                   <h4>Cover</h4>
                   <input onChange={handleFile} name="cover" type="file" />
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12 col-xs-12 col-md-12">
+                <div className="item-input">
+                  <h4>Cover</h4>
+                  <select
+                    name="category"
+                    id="category"
+                    onChange={handleAllChange}
+                  >
+                    <option value="*" disabled selected>
+                      Select Option
+                    </option>
+                    <option value="web">Web App</option>
+                    <option value="android">Android App</option>
+                  </select>
                 </div>
               </div>
             </div>
