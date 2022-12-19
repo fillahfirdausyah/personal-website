@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { BiChevronRight } from "react-icons/bi";
 
 import supabaseClient from "../../api/supabaseClient";
@@ -55,9 +55,9 @@ function DetailWorksPage() {
             <div className="detail-works-wrapper">
               <img src={data[0].cover} alt="" />
               <div className="breadcrumbs">
-                <a href="/works">
+                <Link to="/works">
                   <h4>Works</h4>
-                </a>
+                </Link>
                 <BiChevronRight size={24} />
                 <h4>{id}</h4>
               </div>

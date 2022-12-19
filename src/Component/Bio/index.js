@@ -22,7 +22,7 @@ function Bio() {
           <span className="history-year">2020</span>
           <div className="history-detail">
             <p className="history-main">Worked at PT.Buana Lintas Media</p>
-            <p className="history-role">(Fullstack Developer)</p>
+            <p className="history-role">(Web Developer)</p>
           </div>
         </div>
         <div className="bio-history">

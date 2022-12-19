@@ -11,7 +11,7 @@ function MyProfile(props) {
       </div>
       <div className="user-detail">
         <h3>{props.fullName}</h3>
-        <p>Web & Android Developer</p>
+        <p>🌐Web & 📱Android Technology Enthusiast</p>
       </div>
     </div>
   );
