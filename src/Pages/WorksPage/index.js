@@ -1,16 +1,16 @@
-import { React, useEffect, useState } from "react";
+import { React, useEffect, useState } from 'react';
 
-import supabaseClient from "../../api/supabaseClient";
+import supabaseClient from '../../api/supabaseClient';
 
-import Navbar from "../../Component/Navbar/Navbar";
-import WorksCard from "../../Component/WorksCard";
-import Footer from "../../Component/Footer";
-import Loading from "../../Component/Loading";
+import Navbar from '../../Component/Navbar/Navbar';
+import WorksCard from '../../Component/WorksCard';
+import Footer from '../../Component/Footer';
+import Loading from '../../Component/Loading';
 
-import { CiFilter } from "react-icons/ci";
+import { CiFilter } from 'react-icons/ci';
 
-import "./style.css";
-import FadeIn from "react-fade-in/lib/FadeIn";
+import './style.css';
+import FadeIn from 'react-fade-in/lib/FadeIn';
 
 function WorksPage() {
   const [data, setData] = useState([]);
@@ -20,7 +20,7 @@ function WorksPage() {
   useEffect(() => {
     const fethcData = async () => {
       setIsLoading(true);
-      const { data, error } = await supabaseClient.from("works").select();
+      const { data, error } = await supabaseClient.from('works').select();
       setData(data);
       setIsLoading(false);
     };
@@ -30,14 +30,14 @@ function WorksPage() {
   const filterData = async (category) => {
     setIsLoading(true);
     setIsVisible(false);
-    if (category == "all") {
-      const { data, error } = await supabaseClient.from("works").select();
+    if (category === 'all') {
+      const { data, error } = await supabaseClient.from('works').select();
       setData(data);
     } else {
       const { data, error } = await supabaseClient
-        .from("works")
+        .from('works')
         .select()
-        .eq("category", category);
+        .eq('category', category);
       setData(data);
     }
     setIsLoading(false);
@@ -60,14 +60,14 @@ function WorksPage() {
               <div
                 className={
                   isVisible
-                    ? "filter-value angry-animate"
-                    : "filter-value appear-out"
+                    ? 'filter-value angry-animate'
+                    : 'filter-value appear-out'
                 }
               >
                 <ul>
-                  <li onClick={() => filterData("all")}>All</li>
-                  <li onClick={() => filterData("web")}>Web App</li>
-                  <li onClick={() => filterData("android")}>Android App</li>
+                  <li onClick={() => filterData('all')}>All</li>
+                  <li onClick={() => filterData('web')}>Web App</li>
+                  <li onClick={() => filterData('android')}>Android App</li>
                 </ul>
               </div>
             </div>
@@ -77,22 +77,22 @@ function WorksPage() {
               <Loading />
             </div>
           ) : (
-            <FadeIn>
-              <div className="list-works row">
-                {data.map((x) => (
-                  <div
-                    key={x.id}
-                    className="col-lg-6 col-md-6 col-sm-6 col-xs-12"
-                  >
-                    <WorksCard
-                      cover={x.cover}
-                      title={x.title}
-                      description={x.short_desc}
-                    />
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
+            // <FadeIn>
+            <div className="list-works row">
+              {data.map((x) => (
+                <div
+                  key={x.id}
+                  className="col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                >
+                  <WorksCard
+                    cover={x.cover}
+                    title={x.title}
+                    description={x.short_desc}
+                  />
+                </div>
+              ))}
+            </div>
+            // </FadeIn>
           )}
         </div>
         <Footer />

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import "./style.css";
+import './style.css';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function WorksCard(props) {
   return (

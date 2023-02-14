@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useCallback, useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-import { BiMenu } from "react-icons/bi";
+import { BiMenu } from 'react-icons/bi';
 
-import "./style.css";
+import './style.css';
 
 function Navbar() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -17,9 +17,9 @@ function Navbar() {
   });
 
   useEffect(() => {
-    window.addEventListener("resize", handleWindowSize);
+    window.addEventListener('resize', handleWindowSize);
 
-    return () => window.removeEventListener("resize", handleWindowSize);
+    return () => window.removeEventListener('resize', handleWindowSize);
   }, [handleWindowSize]);
 
   return (
@@ -28,14 +28,14 @@ function Navbar() {
         <nav className="nav-container">
           <ul>
             <li>
-              <Link to="/" className={pathname == "/" ? "active" : ""}>
+              <Link to="/" className={pathname === '/' ? 'active' : ''}>
                 Home
               </Link>
             </li>
             <li>
               <Link
                 to="/works"
-                className={pathname == "/works" ? "active" : ""}
+                className={pathname === '/works' ? 'active' : ''}
               >
                 Works
               </Link>
@@ -43,15 +43,19 @@ function Navbar() {
             <li>
               <Link
                 to="/techstacks"
-                className={pathname == "/techstacks" ? "active" : ""}
+                className={pathname === '/techstacks' ? 'active' : ''}
               >
                 Tech Stack
               </Link>
             </li>
             <li>
-              <Link to="https://github.com/fillahfirdausyah/personal-website">
+              <a
+                href="https://github.com/fillahfirdausyah/personal-website"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Github
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
@@ -64,27 +68,27 @@ function Navbar() {
                 className="nav-icon-wrapper"
                 onClick={() => setIsNavItemVisible(!isNavItemVisible)}
               >
-                <BiMenu size={"30px"} />
+                <BiMenu size={'30px'} />
               </div>
             </div>
           </div>
           <div
             className={
               isNavItemVisible
-                ? "nav-mobile-item-container angry-animate"
-                : "nav-mobile-item-container appear-out"
+                ? 'nav-mobile-item-container angry-animate'
+                : 'nav-mobile-item-container appear-out'
             }
           >
             <ul>
               <li>
-                <Link to="/" className={pathname == "/" ? "active" : ""}>
+                <Link to="/" className={pathname === '/' ? 'active' : ''}>
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   to="/works"
-                  className={pathname == "/works" ? "active" : ""}
+                  className={pathname === '/works' ? 'active' : ''}
                 >
                   Works
                 </Link>
@@ -92,15 +96,19 @@ function Navbar() {
               <li>
                 <Link
                   to="/techstacks"
-                  className={pathname == "/techstacks" ? "active" : ""}
+                  className={pathname === '/techstacks' ? 'active' : ''}
                 >
                   Tech Stack
                 </Link>
               </li>
               <li>
-                <Link to="https://github.com/fillahfirdausyah/personal-website">
+                <a
+                  href="https://github.com/fillahfirdausyah/personal-website"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Github
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
